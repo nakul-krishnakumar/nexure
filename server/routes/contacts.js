@@ -4,9 +4,8 @@ const db = require('../db');
 const router = express.Router();
 
 // ROUTE 1: /api/contacts/fetchall
-router.get('/fetchall', async (req, res) => {
+router.post('/fetchall', async (req, res) => {
     const { sortAsc } = req.body;
-    console.log(sortAsc); //testing
     const { data, error } = await db
     .from('contacts')
     .select('id, first_name, last_name, phone_number, email, company, job_title')

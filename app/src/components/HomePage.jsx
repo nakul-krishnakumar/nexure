@@ -1,5 +1,5 @@
 import { useTheme } from "@mui/material/styles";
-import { Button, Container, Typography, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Pagination } from "@mui/material";
+import { Button, Container, Typography, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Pagination, Box } from "@mui/material";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 import AddIcon from '@mui/icons-material/Add';
@@ -49,7 +49,7 @@ const HomePage = () => {
         });
     }
     const fetchContacts = async (sortAsc) => { // Fetch data from the server
-        await axios.get('http://localhost:5000/api/contacts/fetchall', { sortAsc }) //sending modal just so rerendering doesnt occur
+        await axios.post('http://localhost:5000/api/contacts/fetchall', { sortAsc }) //sending modal just so rerendering doesnt occur
         .then((result) => {
             console.log(result); //testing
             setRows(result.data);
@@ -77,13 +77,13 @@ const HomePage = () => {
     
     return (
         <>
-            <Container sx={{ height: '100vh' }}>
+            <Container sx={{ height: '100vh', paddingTop: '2rem' }}>
 
-                <Typography variant="h2" sx={{ color: 'primary.main', textAlign: 'center', fontWeight: '700' }}>
-                    NEXURE
-                </Typography>
+                <Box sx={{ color: 'primary.main', textAlign: 'center', fontWeight: 800, fontSize: '3rem' }}>
+                    N E X U R E
+                </Box>
 
-                <div className="button-wrapper" style={{ display: 'flex', justifyContent:'flex-end', marginTop: '8rem'}}>
+                <div className="button-wrapper" style={{ display: 'flex', justifyContent:'flex-end', marginTop: '5rem'}}>
                     <Button variant="contained"
                             sx={{ bgcolor: theme.palette.primary.main, 
                                   margin: '1rem 0rem',
@@ -143,7 +143,7 @@ const HomePage = () => {
                     </TableContainer>
                     {rows.length === 0 &&
                         <Container sx={{ width: '100%', display: 'flex', justifyContent: 'center'}}>
-                            <Typography variant="h4" sx={{ color: theme.palette.primary.main, textAlign: 'center' }}>
+                            <Typography variant="h4" sx={{ color: theme.palette.primary.main, textAlign: 'center', mt: '1rem' }}>
                                 No Contacts Available
                             </Typography>
                         </Container>
