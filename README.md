@@ -83,3 +83,11 @@ Note: Both the client and the server should be running concurrently for the proj
 Database Setup
 
 Note: You do not need to set up a local database as we are using a cloud PostgreSQL database hosted on Supabase.
+
+SCREENSHOTS:
+  ![image](https://github.com/user-attachments/assets/b5a64596-9c99-4a2c-a8fc-436d6415a290)
+  ![image](https://github.com/user-attachments/assets/2ad1b699-12f8-4184-b563-be2e599cb705)
+
+  ![image](https://github.com/user-attachments/assets/bf09eb6a-fb26-4e27-a100-d30fee34924d)
+
+
