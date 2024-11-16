@@ -1,6 +1,7 @@
 # NEXURE
-
 ## A Safe and Reliable Contact Management System
+( Nexure -> Nexus (Connection) + Secure )
+
 
 ### Introduction
 
