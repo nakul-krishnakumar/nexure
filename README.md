@@ -5,7 +5,9 @@
 
 ### Introduction
 
-NEXURE is a contact management system that allows users to securely store, manage, and organize their contacts. The major technical improvement made in this project is the use of `POST` instead of `GET` to fetch contacts. This decision allows for sending an order type, which simplifies sorting the contacts and ensures that the sorting process is more efficient with minimal code.
+NEXURE is a contact management system that allows users to securely store, manage, and organize their contacts.
+
+The major technical change made in this project is the use of `POST` instead of `GET` to fetch contacts. This decision allows for sending an order type, which simplifies sorting the contacts and ensures that the sorting process is more efficient with minimal code.
 
 ### WORKING
 
