@@ -123,7 +123,7 @@ const HomePage = () => {
                                     <TableCell>
                                         <Button variant="contained" 
                                                 sx={{ bgcolor: theme.palette.primary.main }} 
-                                                onClick={() => handleEdit(index)}
+                                                onClick={() => handleEdit((currentPage-1)*5 + index)}
                                         >
                                             Edit
                                         </Button>
